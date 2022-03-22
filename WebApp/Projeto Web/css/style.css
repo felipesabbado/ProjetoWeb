@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'majestyregular';
+    src: url('../fonts/majesty_regular-webfont.woff2') format('woff2'),
+    url('../fonts/majesty_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+header{
+    background: #2f2f2f;
+}
+
+.header-brand{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+header img{
+    width: 25%;
+    height: auto;
+}
+
+form {
+    background-color: #ffffff;
+    width: 50%;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+::placeholder {
+    color: #2c2b2b;
+    opacity: 0.7;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+
+svg {
+    color: #FFB500;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: #000000;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+
+
+header h1{
+    font-family: 'majestyregular', serif;
+    background:  #FFB500;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 200%;
+
+}
+
+footer{
+    text-align: center;
+    background: linear-gradient(150deg, #2C064B, #181168, #FF6DAF, #FFB500);
+    padding: 40px 0;
+}
+
+footer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: auto;
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px 0 0;
+}

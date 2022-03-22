@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dicionario de dados.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+    <style>
+
+        body {
+            font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+            font-size: 14px;
+            padding: 0 26px;
+            line-height: 22px;
+            word-wrap: break-word;
+        }
+
+        #code-csp-warning {
+            position: fixed;
+            top: 0;
+            right: 0;
+            color: white;
+            margin: 16px;
+            text-align: center;
+            font-size: 12px;
+            font-family: sans-serif;
+            background-color: #444444;
+            cursor: pointer;
+            padding: 6px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+        }
+
+        #code-csp-warning:hover {
+            text-decoration: none;
+            background-color: #007acc;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
+        }
+
+        body.scrollBeyondLastLine {
+            margin-bottom: calc(100vh - 22px);
+        }
+
+        body.showEditorSelection .code-line {
+            position: relative;
+        }
+
+        body.showEditorSelection .code-active-line:before,
+        body.showEditorSelection .code-line:hover:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -12px;
+            height: 100%;
+        }
+
+        body.showEditorSelection li.code-active-line:before,
+        body.showEditorSelection li.code-line:hover:before {
+            left: -30px;
+        }
+
+        .vscode-light.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .vscode-light.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(0, 0, 0, 0.40);
+        }
+
+        .vscode-light.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        .vscode-dark.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .vscode-dark.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(255, 255, 255, 0.60);
+        }
+
+        .vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-active-line:before {
+            border-left: 3px solid rgba(255, 160, 0, 0.7);
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-line:hover:before {
+            border-left: 3px solid rgba(255, 160, 0, 1);
+        }
+
+        .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+            border-left: none;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 1px solid -webkit-focus-ring-color;
+            outline-offset: -1px;
+        }
+
+        hr {
+            border: 0;
+            height: 2px;
+            border-bottom: 2px solid;
+        }
+
+        h1 {
+            padding-bottom: 0.3em;
+            line-height: 1.2;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table > thead > tr > th {
+            text-align: left;
+            border-bottom: 1px solid;
+        }
+
+        table > thead > tr > th,
+        table > thead > tr > td,
+        table > tbody > tr > th,
+        table > tbody > tr > td {
+            padding: 5px 10px;
+        }
+
+        table > tbody > tr + tr > td {
+            border-top: 1px solid;
+        }
+
+        blockquote {
+            margin: 0 7px 0 5px;
+            padding: 0 16px 0 10px;
+            border-left-width: 5px;
+            border-left-style: solid;
+        }
+
+        code {
+            font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+            font-size: 1em;
+            line-height: 1.357em;
+        }
+
+        body.wordWrap pre {
+            white-space: pre-wrap;
+        }
+
+        pre:not(.hljs),
+        pre.hljs code > div {
+            padding: 16px;
+            border-radius: 3px;
+            overflow: auto;
+        }
+
+        pre code {
+            color: rgba(0, 0, 0, 0.4);
+            tab-size: 4;
+        }
+
+        /** Theming */
+
+        .vscode-light pre {
+            background-color: rgba(220, 220, 220, 0.4);
+        }
+
+        .vscode-dark pre {
+            background-color: rgba(10, 10, 10, 0.4);
+        }
+
+        .vscode-high-contrast pre {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .vscode-high-contrast h1 {
+            border-color: rgb(0, 0, 0);
+        }
+
+        .vscode-light table > thead > tr > th {
+            border-color: rgba(0, 0, 0, 0.69);
+        }
+
+        .vscode-dark table > thead > tr > th {
+            border-color: rgba(255, 255, 255, 0.69);
+        }
+
+        .vscode-light h1,
+        .vscode-light hr,
+        .vscode-light table > tbody > tr + tr > td {
+            border-color: rgba(0, 0, 0, 0.18);
+        }
+
+        .vscode-dark h1,
+        .vscode-dark hr,
+        .vscode-dark table > tbody > tr + tr > td {
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+
+        /* Tomorrow Theme */
+        /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+        /* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+        /* Tomorrow Comment */
+        .hljs-comment,
+        .hljs-quote {
+            color: #8e908c;
+        }
+
+        /* Tomorrow Red */
+        .hljs-variable,
+        .hljs-template-variable,
+        .hljs-tag,
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-regexp,
+        .hljs-deletion {
+            color: #c82829;
+        }
+
+        /* Tomorrow Orange */
+        .hljs-number,
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-literal,
+        .hljs-type,
+        .hljs-params,
+        .hljs-meta,
+        .hljs-link {
+            color: #f5871f;
+        }
+
+        /* Tomorrow Yellow */
+        .hljs-attribute {
+            color: #eab700;
+        }
+
+        /* Tomorrow Green */
+        .hljs-string,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-addition {
+            color: #718c00;
+        }
+
+        /* Tomorrow Blue */
+        .hljs-title,
+        .hljs-section {
+            color: #4271ae;
+        }
+
+        /* Tomorrow Purple */
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #8959a8;
+        }
+
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            color: #4d4d4c;
+            padding: 0.5em;
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+    </style>
+
+    <style>
+        /*
+         * Markdown PDF CSS
+         */
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+            padding: 0 12px;
+        }
+
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
+
+        pre:not(.hljs) {
+            padding: 23px;
+            line-height: 19px;
+        }
+
+        blockquote {
+            background: rgba(127, 127, 127, 0.1);
+            border-color: rgba(0, 122, 204, 0.5);
+        }
+
+        .emoji {
+            height: 1.4em;
+        }
+
+        code {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        /* for inline code */
+        :not(pre):not(.hljs) > code {
+            color: #C9AE75; /* Change the old color so it seems less like an error */
+            font-size: inherit;
+        }
+
+        /* Page Break : use <div class="page"/> to insert page break
+        -------------------------------------------------------- */
+        .page {
+            page-break-after: always;
+        }
+
+    </style>
+
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+            ? 'dark'
+            : 'default'
+    });
+</script>
+<h1 id="dicionario-de-dados">Dicionario de Dados</h1>
+<p><br></br></p>
+<h2 id="users">Users</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">us_id</td>
+        <td style="text-align:center">Id do user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_name</td>
+        <td style="text-align:center">Nome do user</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">60</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_bdate</td>
+        <td style="text-align:center">Data de anversario</td>
+        <td style="text-align:center">date</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_gender</td>
+        <td style="text-align:center">Genero do user</td>
+        <td style="text-align:center">char</td>
+        <td style="text-align:center">1</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_email</td>
+        <td style="text-align:center">Email do user</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_country</td>
+        <td style="text-align:center">Pais do user</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_bio</td>
+        <td style="text-align:center">Uma breve descriçao de si mesmo</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">400</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_dist</td>
+        <td style="text-align:center">Distancia que o user ja percorreu</td>
+        <td style="text-align:center">float</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">default 0</td>
+    </tr>
+    </tbody>
+</table>
+
+<p><br></br></p>
+<h2 id="spots">Spots</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">sp_id</td>
+        <td style="text-align:center">Id da atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">sp_name</td>
+        <td style="text-align:center">Nome da atração</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">60</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">sp_lat</td>
+        <td style="text-align:center">Latitude da atração</td>
+        <td style="text-align:center">float</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">sp_long</td>
+        <td style="text-align:center">Longitude da atração</td>
+        <td style="text-align:center">float</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">sp_price</td>
+        <td style="text-align:center">Saber se a atraçao e paga ou não</td>
+        <td style="text-align:center">boolean</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">us_bio</td>
+        <td style="text-align:center">Uma breve descriçao da atração</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">400</td>
+        <td style="text-align:center"></td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="routes">Routes</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">rt_id</td>
+        <td style="text-align:center">Id da rota</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">rt_name</td>
+        <td style="text-align:center">Nome da rota</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">60</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">rt_dist</td>
+        <td style="text-align:center">Distancia total da rota</td>
+        <td style="text-align:center">float</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">rt_bio</td>
+        <td style="text-align:center">Uma breve descriçao da atração</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">400</td>
+        <td style="text-align:center"></td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="tags">Tags</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">tg_id</td>
+        <td style="text-align:center">Id da tag</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">tg_name</td>
+        <td style="text-align:center">Nome da tag (ex.: Natureza, Animais, ...)</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">tg_tt_id</td>
+        <td style="text-align:center">id do tipo de tag</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center"></td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="tag-types">Tag Types</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">tt_id</td>
+        <td style="text-align:center">Id do tipo de tag</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">tt_name</td>
+        <td style="text-align:center">Nome do tipo de tag (ex.: Sistema, User, ...)</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="user-tags">User tags</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">ut_id</td>
+        <td style="text-align:center">Id da Tag de um user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ut_tg_id</td>
+        <td style="text-align:center">Qual e a tag</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ut_us_id</td>
+        <td style="text-align:center">De que User</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="spot-tags">Spot Tags</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">st_id</td>
+        <td style="text-align:center">Id da Tag de uma atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">st_sp_id</td>
+        <td style="text-align:center">De que atração</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">st_tg_id</td>
+        <td style="text-align:center">Qual a tag</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="spot-evaluations">Spot Evaluations</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">se_id</td>
+        <td style="text-align:center">Id da avaliação da atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">se_rate</td>
+        <td style="text-align:center">Rate de 1 a 5 da atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">se_comment</td>
+        <td style="text-align:center">Comentario de um user sobre a atração</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">400</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">se_us_id</td>
+        <td style="text-align:center">Que user comentou</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">se_sp_id</td>
+        <td style="text-align:center">Qual foi a atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="route-evaluations">Route Evaluations</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">re_id</td>
+        <td style="text-align:center">Id da avaliação da rota</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">re_rate</td>
+        <td style="text-align:center">Rate de 1 a 5 da rota</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">re_comment</td>
+        <td style="text-align:center">Comentario de um user sobre a rota</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">400</td>
+        <td style="text-align:center"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center">re_us_id</td>
+        <td style="text-align:center">Que user comentou</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">re_rt_id</td>
+        <td style="text-align:center">Qual foi a rota</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="fav-spots">Fav Spots</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">fs_id</td>
+        <td style="text-align:center">Id da rota favorita de um user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">fs_us_id</td>
+        <td style="text-align:center">De que user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">fs_sp_id</td>
+        <td style="text-align:center">Qual a atração</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="type-users">Type Users</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">tu_id</td>
+        <td style="text-align:center">Id do tipo de user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">tu_name</td>
+        <td style="text-align:center">Nome do tipo (ex.:Novato, desbravador, especialista, ..)</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="user-achievements">User Achievements</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">ua_id</td>
+        <td style="text-align:center">Id da medalha de um user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ua_date</td>
+        <td style="text-align:center">Quando conseguiu</td>
+        <td style="text-align:center">date</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ua_us_id</td>
+        <td style="text-align:center">De que user</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ua_ac_id</td>
+        <td style="text-align:center">Qual foi a medalha</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+<p><br></br></p>
+<h2 id="achievements">Achievements</h2>
+<table>
+    <thead>
+    <tr>
+        <th style="text-align:center">Nome</th>
+        <th style="text-align:center">Descrição</th>
+        <th style="text-align:center">Tipo de dados</th>
+        <th style="text-align:center">Tamanho</th>
+        <th style="text-align:center">Restriçoes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align:center">ac_id</td>
+        <td style="text-align:center">Id da medalha</td>
+        <td style="text-align:center">int</td>
+        <td style="text-align:center"></td>
+        <td style="text-align:center">Pk, serial</td>
+    </tr>
+    <tr>
+        <td style="text-align:center">ac_name</td>
+        <td style="text-align:center">Nome da medalha (ex.: 1 museu, 5 museus, ...)</td>
+        <td style="text-align:center">varchar</td>
+        <td style="text-align:center">30</td>
+        <td style="text-align:center">not null</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
