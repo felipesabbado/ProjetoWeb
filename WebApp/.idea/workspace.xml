@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c8e222f-35a2-44a0-851a-4c8ee23e15e7" name="Changes" comment="" />
+    <list default="true" id="8c8e222f-35a2-44a0-851a-4c8ee23e15e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dashboard/perfil_local.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dashboard/resultado.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/amigo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/amigo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/avaliacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/avaliacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/empresario.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/empresario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/evento.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/evento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/favorito.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/favorito.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/grupo01.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/grupo01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/local01.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/local01.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/media/9606031aabebde32fa96edeff071a132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/mensagem.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/mensagem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/perfil_utilizador.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/utilizador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/utilizador.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +61,7 @@
       <updated>1648231838551</updated>
       <workItem from="1648231840664" duration="4336000" />
       <workItem from="1648288815552" duration="26171000" />
+      <workItem from="1648567582680" duration="10200000" />
     </task>
     <servers />
   </component>
