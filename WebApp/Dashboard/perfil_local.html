@@ -370,10 +370,11 @@
                                     <button type="button" class="btn btn-primary btn-sm">Avaliar</button>
                                     <button type="button" class="btn btn-outline-primary btn-sm">Favorito</button>
                                     <button type="button" class="btn btn-outline-primary btn-sm">Compartilhar</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm">Editar Local</button>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <img class="img d-inline" src="images/bg-title-01.jpg" alt="Card image cap">
+                                        <img class="img" src="images/bg-title-01.jpg" alt="Card image cap">
                                     </div>
                                     <div class="col-3">
                                         <img class="img" src="images/bg-title-01.jpg" alt="Card image cap">
@@ -390,11 +391,11 @@
                                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
                                                    aria-selected="true">Sobre</a>
-                                                <a class="nav-item nav-link" id="nav-avaliacao-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+                                                <a class="nav-item nav-link" id="nav-avaliacao-tab" data-toggle="tab" href="#nav-avaliacao" role="tab" aria-controls="nav-avaliacao"
                                                    aria-selected="false">Avaliações</a>
-                                                <a class="nav-item nav-link" id="nav-fotos-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                                <a class="nav-item nav-link" id="nav-fotos-tab" data-toggle="tab" href="#nav-fotos" role="tab" aria-controls="nav-fotos"
                                                    aria-selected="false">Fotos</a>
-                                                <a class="nav-item nav-link" id="nav-ementa-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+                                                <a class="nav-item nav-link" id="nav-ementa-tab" data-toggle="tab" href="#nav-ementa" role="tab" aria-controls="nav-ementa"
                                                    aria-selected="false">Ementa</a>
                                             </div>
                                         </nav>
@@ -427,52 +428,31 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Card with Image Overlay</h4>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-6 col-xl-4">
-                                            <div class="card mb-2 bg-gradient-dark">
-                                                <img class="card-img-top" src="./images/img/photo1.png" alt="Dist Photo 1">
-                                                <div class="card-img-overlay d-flex flex-column justify-content-end">
-                                                    <h5 class="card-title text-primary text-white">Card Title</h5>
-                                                    <p class="card-text text-white pb-2 pt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</p>
-                                                    <a href="#" class="text-white">Last update 2 mins ago</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-6 col-xl-4">
-                                            <div class="card mb-2">
-                                                <img class="card-img-top" src="./images/img/photo2.png" alt="Dist Photo 2">
-                                                <div class="card-img-overlay d-flex flex-column justify-content-center">
-                                                    <h5 class="card-title text-white mt-5 pt-2">Card Title</h5>
-                                                    <p class="card-text pb-2 pt-1 text-white">
-                                                        Lorem ipsum dolor sit amet, <br>
-                                                        consectetur adipisicing elit <br>
-                                                        sed do eiusmod tempor.
-                                                    </p>
-                                                    <a href="#" class="text-white">Last update 15 hours ago</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-6 col-xl-4">
-                                            <div class="card mb-2">
-                                                <img class="card-img-top" src="./images/img/photo3.jpg" alt="Dist Photo 3">
-                                                <div class="card-img-overlay">
-                                                    <h5 class="card-title text-primary">Card Title</h5>
-                                                    <p class="card-text pb-1 pt-1 text-white">
-                                                        Lorem ipsum dolor <br>
-                                                        sit amet, consectetur <br>
-                                                        adipisicing elit sed <br>
-                                                        do eiusmod tempor. </p>
-                                                    <a href="#" class="text-primary">Last update 3 days ago</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="./images/img/photo1.png?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./images/img/photo2.png?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="./images/img/photo3.jpg?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
                                     </div>
                                 </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Anterior</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Próximo</span>
+                                </a>
                             </div>
                         </div>
                     </div>
