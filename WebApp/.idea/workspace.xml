@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c8e222f-35a2-44a0-851a-4c8ee23e15e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Dashboard/editarLocal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/perfil_local.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/perfil_local.html" afterDir="false" />
     </list>
@@ -50,6 +52,7 @@
       <workItem from="1648288815552" duration="26171000" />
       <workItem from="1648567582680" duration="10200000" />
       <workItem from="1648713744610" duration="3406000" />
+      <workItem from="1649078011676" duration="2518000" />
     </task>
     <servers />
   </component>
@@ -66,7 +69,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
