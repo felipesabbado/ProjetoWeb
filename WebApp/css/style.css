@@ -1,14 +1,18 @@
 @font-face {
-    font-family: 'majestyregular';
-    src: url('../fonts/majesty_regular-webfont.woff2') format('woff2'),
-    url('../fonts/majesty_regular-webfont.woff') format('woff');
+    font-family: 'dancing_scriptregular';
+    src: url('../fonts/dancingscript-variablefont_wght-webfont.woff2') format('woff2'),
+    url('../fonts/dancingscript-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
+header {
+    font-size: 22px;
+}
+
 header{
-    background: #2f2f2f;
+    background: #212121;
 }
 
 .header-brand{
@@ -68,11 +72,13 @@ input {
 
 
 header h1{
-    font-family: 'majestyregular', serif;
+    font-family: 'dancing_scriptregular', serif;
     background:  #FFB500;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 200%;
+    margin: 25px auto 25px auto;
+    padding-bottom: 25px;
 
 }
 
