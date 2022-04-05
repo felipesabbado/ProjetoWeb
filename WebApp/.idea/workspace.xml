@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c8e222f-35a2-44a0-851a-4c8ee23e15e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dashboard/editarLocal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/amigo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/amigo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/avaliacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/avaliacao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/editarLocal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/editarLocal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/evento.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/evento.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/grupo01.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/grupo01.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard/perfil_local.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/perfil_local.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard/perfil_utilizador.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard/perfil_utilizador.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Layout site/DashBoard/CoolAdmin-master" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -53,6 +58,7 @@
       <workItem from="1648567582680" duration="10200000" />
       <workItem from="1648713744610" duration="3406000" />
       <workItem from="1649078011676" duration="2518000" />
+      <workItem from="1649174398660" duration="9375000" />
     </task>
     <servers />
   </component>
